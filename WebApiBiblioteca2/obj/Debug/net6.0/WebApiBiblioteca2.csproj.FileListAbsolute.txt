@@ -73,3 +73,4 @@ C:\Users\nesto\Dropbox\PROGRAMACION\Udemy_.Net_6\WebApiBiblioteca2\WebApiBibliot
 C:\Users\nesto\Dropbox\PROGRAMACION\Udemy_.Net_6\WebApiBiblioteca2\WebApiBiblioteca2\obj\Debug\net6.0\WebApiBiblioteca2.pdb
 C:\Users\nesto\Dropbox\PROGRAMACION\Udemy_.Net_6\WebApiBiblioteca2\WebApiBiblioteca2\obj\Debug\net6.0\WebApiBiblioteca2.genruntimeconfig.cache
 C:\Users\nesto\Dropbox\PROGRAMACION\Udemy_.Net_6\WebApiBiblioteca2\WebApiBiblioteca2\obj\Debug\net6.0\ref\WebApiBiblioteca2.dll
+C:\Users\nesto\Dropbox\PROGRAMACION\Udemy_.Net_6\WebApiBiblioteca2\WebApiBiblioteca2\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
