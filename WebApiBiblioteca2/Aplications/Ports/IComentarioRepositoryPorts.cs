@@ -9,6 +9,6 @@ namespace WebApiBiblioteca2.Aplications.Ports
         Task DeleteComentario(int id);
         Task UpdateComentario(UpdateComentarioDTO comentario);
         Task<ComentarioDTO> GetComentarioById(int id);
-        Task<List<ComentarioDTO>> GetAll();
+        Task<List<ComentarioDTO>> GetAll(int libroId);
     }
 }

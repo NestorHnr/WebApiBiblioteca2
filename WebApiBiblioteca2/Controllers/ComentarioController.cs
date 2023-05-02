@@ -18,11 +18,11 @@ namespace WebApiBiblioteca2.Controllers
 
         [HttpGet]
 
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll(int libroId)
         {
             try
             {
-                var user = await _comentarioRepositoryPorts.GetAll();
+                var user = await _comentarioRepositoryPorts.GetAll(libroId);
                 return Ok(user);
             }
             catch (Exception ex)

@@ -42,22 +42,22 @@ namespace WebApiBiblioteca2.DataAdapter.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<List<ComentarioDTO>> GetAll()
+        public async Task<List<ComentarioDTO>> GetAll(int libroId )
         {
-            //var extisteLibro = await _context.Libros.AnyAsync(libroDB => libroDB.Id == libroDB.Id);
+            var extisteLibro = await _context.Libros.AnyAsync(libroDB => libroDB.Id == libroDB.Id);
 
-            //if (!extisteLibro)
-            //    throw new Exception($"No existe libro con ese id");
+            if (!extisteLibro)
+                throw new Exception($"No existe libro con ese id");
 
-            //var comentarios = await _context.Comentarios
-            //    .Where(comentarioDB => comentarioDB.LibroId == libroid).ToListAsync();
+            var comentarios = await _context.Comentarios
+                .Where(comentarioDB => comentarioDB.LibroId == libroId).ToListAsync();
 
-            var comentarioList = await _context.Comentarios.ToListAsync();
+            //var comentarioList = await _context.Comentarios.ToListAsync();
 
-            if (comentarioList.Count == 0)
-                throw new Exception("No hay comentarios disponibles");
+            //if (comentarioList.Count == 0)
+            //    throw new Exception("No hay comentarios disponibles");
 
-            var comentario = _mapper.Map<List<ComentarioDTO>>(comentarioList);
+            var comentario = _mapper.Map<List<ComentarioDTO>>(comentarios);
 
             return comentario;
         }

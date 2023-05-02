@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using WebApiBiblioteca2.DataAdapter;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddWebApi_DbContext(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
+builder.Services.AddIdentity<IdentityUser,IdentityRole>()
+    .AddEntityFrameworkStores<WebApiBiblioteca2_DbContext>()
+    .AddDefaultTokenProviders();
 
 var app = builder.Build();
 

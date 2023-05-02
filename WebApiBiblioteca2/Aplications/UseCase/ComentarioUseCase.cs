@@ -18,6 +18,6 @@ namespace WebApiBiblioteca2.Aplications.UseCase
         public async Task DeleteComentario(int id) => await _comentarioRepositoryPorts.DeleteComentario(id);
         public async Task UpdateComentartio(UpdateComentarioDTO comentario) => await _comentarioRepositoryPorts.UpdateComentario(comentario);
         public async Task GetComentarioById(int id) => await _comentarioRepositoryPorts.GetComentarioById(id);
-        public async Task GetAll() => await _comentarioRepositoryPorts.GetAll();
+        public async Task GetAll(int libroId) => await _comentarioRepositoryPorts.GetAll(libroId);
     }
 }
